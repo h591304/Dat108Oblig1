@@ -1,5 +1,24 @@
 package oppgave2;
 
-public class Servitor {
-
+public class Servitor extends Thread {
+	
+	private HamburgerBrett brett;
+	private String navn;
+	
+	public Servitor(HamburgerBrett brett, String navn) {
+		this.brett = brett;
+		this.navn = navn;
+	}
+	
+	@Override
+	public synchronized void run() {
+		
+		try {
+			Kokk.hb.taAvHamburger();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
 }

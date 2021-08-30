@@ -7,9 +7,7 @@ public class Oppgave1_threads {
 		//Denne tråden skal kjøre en linje på skjermen en gang hvert 3 sekund
 		Oppgave1_standardTraad t = new Oppgave1_standardTraad();
 		t.start();
-		
 		Thread.sleep(10000);
-		
 		t.stopp();
 		
 		//Denne tråden skal ha en brukerinput ved JOptionPane med en quit-kommando
