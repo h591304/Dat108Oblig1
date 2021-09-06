@@ -23,9 +23,6 @@ public class HamburgerBrett {
 	//Tilfeldig antall sekunder målt i millisekunder mellom 2 og 6 sekunder
 	int tilfeldigSek = ThreadLocalRandom.current().nextInt(2000, 6000);
 	
-//	//Tilfeldig generert 50/50 sjanse for at en kokk legger til eller en servitør tar av en burger
-//	int tilfeldigTall = ThreadLocalRandom.current().nextInt(1, 2);
-	
 	//løpenummer for å vite hvilken burger som blir lagt på og tatt av
 	int burger = 1;
 	
