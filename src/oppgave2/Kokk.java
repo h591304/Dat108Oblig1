@@ -14,15 +14,18 @@ public class Kokk extends Thread{
 	
 	static HamburgerBrett hb = new HamburgerBrett();
 	
+	int tilfeldigSek = ThreadLocalRandom.current().nextInt(2000, 6000);
+	
 	@Override
 	public synchronized void run() {
 		
-		try {
-			hb.leggTilHamburger();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+		while(true) {
+			try {
+				hb.leggTilHamburger();
+				Thread.sleep(tilfeldigSek);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 	}
-	
-	
 }

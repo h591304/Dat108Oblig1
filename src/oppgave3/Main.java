@@ -1,4 +1,8 @@
-package oppgave2;
+package oppgave3;
+
+import oppgave2.HamburgerBrett;
+import oppgave2.Kokk;
+import oppgave2.Servitor;
 
 public class Main {
 
@@ -13,9 +17,10 @@ public class Main {
 		HamburgerBrett brett = new HamburgerBrett(KAPASITET);
 		
 		for(String navn : kokker) {
+			
 			Thread k = new Kokk(brett, navn);
 			k.setName(navn);
-			k.start();	
+			k.start();
 		}
 		
 		for(String navn : servitorer) {

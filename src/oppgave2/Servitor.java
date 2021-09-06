@@ -13,12 +13,13 @@ public class Servitor extends Thread {
 	@Override
 	public synchronized void run() {
 		
-		try {
-			Kokk.hb.taAvHamburger();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+		while(true) {
+			try {
+				Kokk.hb.taAvHamburger();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
-		
 	}
 	
 }
